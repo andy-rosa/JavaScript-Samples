@@ -10,6 +10,6 @@ for (let slide of slides) {
     slide.addEventListener('click', () => {
         clearActiveClass();
 
-        this.classList.add('active');
+        slide.classList.add('active');
     })
 }
