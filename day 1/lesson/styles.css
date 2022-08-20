@@ -49,5 +49,5 @@ transition: all 600ms ease-in-out;
 
 .slide.active h3 {
   opacity: 1;
-  transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in 0.4s;
 }
