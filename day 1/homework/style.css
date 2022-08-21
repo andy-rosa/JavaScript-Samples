@@ -1,0 +1,89 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: #333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.section-slider {
+    width: 100%;
+    height: 100%;
+}
+
+.slider {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+    gap: 10px;
+}
+
+.slide {
+    position: relative;
+
+    flex: 1;
+    height: 80vh;
+
+    background-position: center center;
+    background-size: cover;
+    border-radius: 30px;
+
+    transition: all 0.4s ease-in;
+
+    color: #fff;
+}
+
+.slide:first-child {
+    background-image: url('https://images.unsplash.com/photo-1615744455875-7ad33653e8c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80');
+}
+
+.slide:nth-child(2) {
+    background-image: url('https://images.unsplash.com/photo-1561703142-b883827407ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80');
+}
+
+.slide:nth-child(3) {
+    background-image: url('https://images.unsplash.com/photo-1522748906645-95d8adfd52c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80');
+    color: rgb(56, 55, 55);
+}
+
+.slide:nth-child(4) {
+    background-image: url('https://images.unsplash.com/photo-1528834342297-fdefb9a5a92b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80');
+}
+
+.slide:last-child {
+    background-image: url('https://images.unsplash.com/photo-1524219726159-3cbf91ce4b70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80');
+}
+
+.card-name {
+    position: absolute;
+    font-size: 30px;
+    bottom: 30px;
+    left: 20px;
+    opacity: 0;
+    margin: 0;
+}
+
+.active {
+    flex: 10;
+}
+
+.slide.active .card-name {
+    opacity: 1;
+    filter: drop-shadow(2px 2px 35% #000);
+    transition: opacity 0.2s ease-in-out 0.4s;
+}
+
+.background {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    filter: blur(24px);
+    background-image: url('https://images.unsplash.com/photo-1615744455875-7ad33653e8c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
