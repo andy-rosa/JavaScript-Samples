@@ -7,7 +7,7 @@ function slidesPlugin(activeSlide = 0) {
         "url('https://images.unsplash.com/photo-1528834342297-fdefb9a5a92b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80')",
         "url('https://images.unsplash.com/photo-1524219726159-3cbf91ce4b70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80')"
     ];
-    let backgroundPhone = document.querySelector('.background'); 
+    let backgroundPicture = document.querySelector('.background'); 
 
     slides[activeSlide].classList.add('active');
 
@@ -28,8 +28,8 @@ function slidesPlugin(activeSlide = 0) {
         })
     }
 
-    let installBackImg = function(elemNub, urlAdress) {
-        elemNub.addEventListener('click', () => backgroundPhone.style.backgroundImage = urlAdress )
+    let installBackImg = function(slideElement, urlAdress) {
+        slideElement.addEventListener('click', () => backgroundPicture.style.backgroundImage = urlAdress )
     }
 }
 
