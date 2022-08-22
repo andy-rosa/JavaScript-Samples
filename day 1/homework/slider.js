@@ -20,6 +20,7 @@ function slidesPlugin(activeSlide = 0) {
     for (let slide of slides) {
         slide.addEventListener('click', () => {
             clearActiveClass();
+
             for (let i = 0; i < slides.length; i++) {
                 installBackImg(slides[i], backgrImg[i]);
             }
