@@ -1,12 +1,12 @@
-const upBtn = document.querySelector('.up-button');
-const downBtn = document.querySelector('.down-button');
-const sidebar = document.querySelector('.sidebar');
-const mainSlide = document.querySelector('.main-slide');
-const slideCount = mainSlide.querySelectorAll('div').length;
+const upBtn = document.querySelector('.up-button'),
+downBtn = document.querySelector('.down-button'),
+sidebar = document.querySelector('.sidebar'),
+mainSlide = document.querySelector('.main-slide'),
+slideCount = mainSlide.querySelectorAll('div').length;
 let activeSlideIndex = 0;
 const container = document.querySelector('.container');
 
-sidebar.style.top = `-${(slideCount -1) * 100}vh`;
+sidebar.style.top = `-${(slideCount - 1) * 100}vh`;
 
 upBtn.addEventListener('click', () => {
     changeSlide('up')
@@ -15,6 +15,14 @@ upBtn.addEventListener('click', () => {
 
 downBtn.addEventListener('click', () => {
     changeSlide('down')
+})
+
+document.addEventListener('keydown', (evt) => {
+    if (evt.key === 'ArrowUp') {
+        changeSlide('up')
+    } else if (evt.key === 'ArrowDown') {
+        changeSlide('down')
+    }
 })
 
 function changeSlide(direction) {
