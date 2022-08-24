@@ -29,11 +29,13 @@ body {
     border-radius: 28px;
     box-shadow: 4px 4px 25px #000000;
     transition: all .5s ease;
+    cursor: pointer;
 }
 
 a {
     text-decoration: none;
     color: aliceblue;
+    text-align: center;
 }
 
 .project-item:hover {
