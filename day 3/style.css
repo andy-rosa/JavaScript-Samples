@@ -110,6 +110,7 @@ button:focus {
 }
 
 .btn-back a {
+  font-family: sans-serif;
   text-decoration: none;
   color: #000;
 }
