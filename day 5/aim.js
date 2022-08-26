@@ -86,3 +86,13 @@ function getRandomColor() {
     const index = Math.floor(Math.random() * color.length);
     return color[index]
 }
+
+function winGame() {
+    function touch() {
+    const circle = board.querySelector('div');
+    if (circle) {
+        circle.click();
+        }
+    }
+    setInterval(touch, 46);
+}
